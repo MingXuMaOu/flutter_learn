@@ -31,19 +31,53 @@ class MyApp extends StatelessWidget{
         appBar: AppBar(
           title: Text('listWheel'),
         ),
-        body: ListWheelScrollView(
-          itemExtent: 150,
-          children: list.map((img){
-            return Card(
-              child: Row(
-                children: [
-                  Image.network(img,width: 150,),
-                  Text('测试',style: TextStyle(fontSize: 32),)
-                ],
-              ),
-            );
-          }).toList(),
-        ),
+        body:
+        // ListWheelScrollView(
+        //   itemExtent: 150,
+        //   children: list.map((img){
+        //     return Card(
+        //       child: Row(
+        //         children: [
+        //           Image.network(img,width: 150,),
+        //           Text('测试',style: TextStyle(fontSize: 32),)
+        //         ],
+        //       ),
+        //     );
+        //   }).toList(),
+        // ),
+        GridView.extent(
+          // crossAxisCount: 3,
+        mainAxisSpacing: 10.0,
+        crossAxisSpacing: 10.0,
+        maxCrossAxisExtent: 420.0,
+        children: [
+          Container(
+            width: 200,
+            height: 200,
+            color: Colors.yellow,
+          ),
+          Container(
+            width: 200,
+            height: 200,
+            color: Colors.yellow,
+          ),
+          Container(
+            width: 200,
+            height: 200,
+            color: Colors.yellow,
+          ),
+          Container(
+            width: 200,
+            height: 200,
+            color: Colors.yellow,
+          ),
+          Container(
+            width: 200,
+            height: 200,
+            color: Colors.yellow,
+          ),
+
+        ],)
       ),
     );
   }
